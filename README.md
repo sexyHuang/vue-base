@@ -8,6 +8,8 @@ First you need to install @vue/cli globally (follow the instructions here).
 
 Then create a project and add the ant-design-vue plugin:
 
-vue create my-app
-cd my-app
-vue add sexy-base
+```
+vue create my-app  
+cd my-app  
+vue add sexy-base  
+```
