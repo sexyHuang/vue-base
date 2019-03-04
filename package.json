@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sexyHuang/vue-base.git"
+    "url": "git+https://github.com/sexyHuang/vue-cli-plugin-sexy-base.git"
   },
   "bugs": {
-    "url": "https://github.com/sexyHuang/vue-base.git/issues"
+    "url": "https://github.com/sexyHuang/vue-cli-plugin-sexy-base.git/issues"
   },
-  "homepage": "https://github.com/sexyHuang/vue-base.git",
+  "homepage": "https://github.com/sexyHuang/vue-cli-plugin-sexy-base.git",
   "author": "huangjianyong",
   "license": "MIT"
 }
