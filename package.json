@@ -1,0 +1,24 @@
+{
+  "name": "vue-cli-plugin-sexy-base",
+  "version": "1.0.0",
+  "description": "vue-cli 3 plugin to add sexy-base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "vue-cli-base-settings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexyHuang/vue-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sexyHuang/vue-base.git/issues"
+  },
+  "homepage": "https://github.com/sexyHuang/vue-base.git",
+  "author": "huangjianyong",
+  "license": "MIT"
+}

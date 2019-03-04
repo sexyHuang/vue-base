@@ -1,6 +1,6 @@
 import BaseApi from './BaseApi';
 //import { SUCCESS, LOGIN_OUT, ABNORMAL } from './config/code';
-import { Toast } from 'vant';
+//import { Toast } from 'vant';
 import { symbolContext } from './decorator/decorator';
 //import store from '@/store';
 
@@ -15,7 +15,9 @@ export default class Api extends BaseApi {
     target.prototype[symbolContext] = this;
   }
   initNotice() {
-    this.Notice = Toast;
+    //this.Notice = Toast;
+    //todo： 实现通知函数
+    super.initNotice();
   }
   request(config) {
     return config;
@@ -29,7 +31,7 @@ export default class Api extends BaseApi {
     console.warn('loginout方法未实现');
   }
   reject(error) {
-    Toast.clear();
+    this.clearNotice();
     throw error;
   }
   before(config) {
@@ -62,7 +64,10 @@ export default class Api extends BaseApi {
   showNotice({ message, position, duration, type }) {
     duration = duration || 1500;
     position = position || 'middle';
-    Toast[type]({ message, position, duration });
+    this.Notice[type]({ message, position, duration });
+  }
+  clearNotice() {
+    this.Notice.clear && this.Notice.clear();
   }
   async common(param) {
     let _config = Object.assign({}, param);
@@ -76,11 +81,11 @@ export default class Api extends BaseApi {
             message: res.msg || '加载完成',
             type: 'success'
           })
-        : Toast.clear();
+        : this.clearNotice();
       param.success ? param.success(res) : '';
     } catch (e) {
       if (param.error) {
-        Toast.clear();
+        this.clearNotice();
         param.error(e, param);
       } else this.error('网络连接失败');
       res = Promise.reject(e);
